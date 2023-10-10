@@ -5,23 +5,72 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "git:commit": "cz",
+    "git:push": "git push -u origin HEAD",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint:fix": "eslint . --fix && yarn format",
+    "lint:strict": "eslint --max-warnings=0 .",
+    "typecheck": "tsc --noEmit --incremental false",
+    "format": "prettier -w .",
+    "find:unused": "next-unused",
+    "format:check": "prettier -c .",
+    "postbuild": "next-sitemap --config next-sitemap.config.js",
+    "prepare": "husky install"
   },
   "dependencies": {
+    "@tabler/icons-react": "2.17.0",
+    "clsx": "^2.0.0",
+    "commitlint": "^17.7.2",
+    "framer-motion": "^10.16.4",
+    "next": "13.5.4",
+    "next-themes": "^0.2.1",
     "react": "^18",
     "react-dom": "^18",
-    "next": "13.5.4"
+    "tailwind-merge": "^1.14.0"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@commitlint/config-conventional": "^17.7.0",
+    "@iconify/react": "^4.1.1",
+    "@svgr/webpack": "^8.1.0",
+    "@tailwindcss/typography": "^0.5.10",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@typescript-eslint/eslint-plugin": "^6.7.4",
+    "@typescript-eslint/parser": "^6.7.4",
     "autoprefixer": "^10",
-    "postcss": "^8",
-    "tailwindcss": "^3",
+    "commitizen": "^4.3.0",
+    "commitlint-config-gitmoji": "^2.3.1",
+    "cz-customizable": "^7.0.0",
     "eslint": "^8",
-    "eslint-config-next": "13.5.4"
+    "eslint-config-next": "13.5.4",
+    "eslint-config-prettier": "^9.0.0",
+    "eslint-plugin-simple-import-sort": "^10.0.0",
+    "eslint-plugin-unused-imports": "^3.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^14.0.1",
+    "postcss": "^8",
+    "prettier": "2.8.8",
+    "prettier-plugin-tailwindcss": "0.4.1",
+    "tailwindcss": "^3",
+    "typescript": "^5"
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,ts,tsx}": [
+      "eslint --max-warnings=0",
+      "prettier -w"
+    ],
+    "**/*.{json,css,scss,md}": [
+      "prettier -w"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "cz-customizable"
+    },
+    "cz-customizable": {
+      "config": "./cz.config.js"
+    }
   }
 }
