@@ -1,6 +1,5 @@
 import * as React from 'react';
 
-import Header from '@/components/layout/Home/Header';
 import SideBar from '@/components/layout/Home/SideBar';
 
 import clsxm from '@/utils/lib/clsxm';
@@ -23,8 +22,7 @@ export default function HomeLayout({ children }: LayoutsProps) {
             'hide-scrollbar w-full lg:h-[calc(100vh-32px)] lg:flex-1 lg:overflow-y-scroll lg:pt-6'
           )}
         >
-          <div className='h-screen'>
-            <Header />
+          <div className='flex h-screen flex-col items-start justify-start gap-4'>
             {children}
           </div>
         </main>

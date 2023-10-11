@@ -8,9 +8,9 @@ import { Divider } from '@/components/elements';
 import { OptimapSvg } from '@/utils/constants/svg';
 import clsxm from '@/utils/lib/clsxm';
 
-export default function Header() {
+const Header = () => {
   return (
-    <div className='flex flex-col gap-4 pb-4'>
+    <div className='flex flex-col gap-4'>
       <div className='flex gap-2 text-2xl font-medium lg:text-3xl'>
         <h1 className='h2 text-gray-700'>Hi, I&apos;m Irawan</h1>{' '}
         <div className='ml-1 animate-waving-hand'>👋</div>
@@ -61,4 +61,6 @@ export default function Header() {
       <Divider className='border-t-2' />
     </div>
   );
-}
+};
+
+export default Header;

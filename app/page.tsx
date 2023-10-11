@@ -1,3 +1,5 @@
+import { HomePage } from '@/components/features';
+
 export default function Home() {
-  return <div className=''>NextJs 13</div>;
+  return <HomePage />;
 }

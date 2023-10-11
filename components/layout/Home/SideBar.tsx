@@ -4,6 +4,7 @@ import { Divider } from '@/components/elements';
 import MenuItem from '@/components/layout/Home/elements/MenuItem';
 import ProfilHeader from '@/components/layout/Home/elements/ProfilHeader';
 
+import { links } from '@/utils/constants/links/links';
 import clsxm from '@/utils/lib/clsxm';
 
 const SideBar = () => {
@@ -19,13 +20,19 @@ const SideBar = () => {
         <nav className='w-full'>
           <Divider className='border-t-2' />
           <div className='flex flex-col items-start justify-start gap-2'>
-            <MenuItem label='Home' />
-            <MenuItem label='Home' />
-            <MenuItem label='Home' />
-            <MenuItem label='Home' />
-            <MenuItem label='Home' />
+            {links.map((value, i) => (
+              <MenuItem {...value} key={i} />
+            ))}
           </div>
           <Divider className='border-t-2' />
+          <div className='text-response-sm flex flex-row items-center justify-center gap-1 font-normal text-primary-600 dark:text-darkText'>
+            <span>© {new Date().getFullYear()} with</span>
+            <span className='animate-pulse text-red-500'>💥</span>
+            <span>by</span>
+            <span className='cursor-pointer hover:dark:text-neutral-400'>
+              onedev
+            </span>
+          </div>
         </nav>
       </div>
     </div>
