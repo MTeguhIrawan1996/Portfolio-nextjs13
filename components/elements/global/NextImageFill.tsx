@@ -25,7 +25,7 @@ export default function NextImageFill({
     <figure
       className={clsxm(
         'relative',
-        isLoading && 'animate-pulse',
+        isLoading && 'animate-pulse bg-gray-200',
         figureClassName
       )}
     >

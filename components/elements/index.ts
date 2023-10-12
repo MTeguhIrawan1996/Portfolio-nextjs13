@@ -3,5 +3,13 @@ import NextImageFill from '@/components/elements/global/NextImageFill';
 import Status from '@/components/elements/global/Status';
 import ToggleThemeIcon from '@/components/elements/global/ToggleThemeIcon';
 import PrimaryLink from '@/components/elements/links/PrimaryLink';
+import SectionWrapper from '@/components/elements/wrapper/sectionWrapper';
 
-export { Divider, NextImageFill, PrimaryLink, Status, ToggleThemeIcon };
+export {
+  Divider,
+  NextImageFill,
+  PrimaryLink,
+  SectionWrapper,
+  Status,
+  ToggleThemeIcon,
+};

@@ -24,7 +24,7 @@ const ProfilHeader = () => {
         />
         <NextImageFill
           figureClassName={clsxm(
-            'absolute z-10 border-2 border-white dark:border-neutral-800 aspect-square overflow-hidden h-24 translate-y-1/2 rounded-full bg-red-300 shadow-md bg-gray-200 transition-all duration-700 delay-0',
+            'absolute z-10 border-2 border-white dark:border-neutral-800 aspect-square overflow-hidden h-24 translate-y-1/2 rounded-full shadow-md transition-all duration-700 delay-0',
             !mounted && 'h-16 aspect-square'
           )}
           imageClassName='scale-105 hover:scale-110'

@@ -12,7 +12,7 @@ const Header = () => {
   return (
     <div className='flex flex-col gap-4'>
       <div className='flex gap-2 text-2xl font-medium lg:text-3xl'>
-        <h1 className='h2 text-gray-700'>Hi, I&apos;m Irawan</h1>{' '}
+        <h1 className='h2 text-primary-700'>Hi, I&apos;m Irawan</h1>{' '}
         <div className='ml-1 animate-waving-hand'>👋</div>
       </div>
       <div className='flex flex-row gap-4'>
