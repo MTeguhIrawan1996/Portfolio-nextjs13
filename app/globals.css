@@ -139,6 +139,7 @@
   }
 
   body,
+  p,
   .p {
     @apply font-primary text-sm dark:text-darkText md:text-base;
   }
