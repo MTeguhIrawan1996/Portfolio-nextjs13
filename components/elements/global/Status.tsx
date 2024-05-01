@@ -3,6 +3,8 @@
 import { motion } from 'framer-motion';
 import { useTheme } from 'next-themes';
 
+import AnimationDot from '@/components/elements/ui-animation/AnimationDot';
+
 import useHasMounted from '@/utils/hooks/useHasMounted';
 
 export default function Status() {
@@ -27,11 +29,7 @@ export default function Status() {
         data-testid='available-hire'
         className='relative flex items-center gap-2 rounded-xl border border-neutral-300 bg-white px-2 py-1 dark:border-neutral-700 dark:bg-dark'
       >
-        <motion.div
-          className='h-2 w-2 rounded-full bg-green-400'
-          animate={{ scale: [1, 1.2, 1] }}
-          transition={{ duration: 0.5, repeat: Infinity }}
-        />
+        <AnimationDot />
         <span className='text-xs text-neutral-600 dark:text-neutral-400'>
           Hire me.
         </span>

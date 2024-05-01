@@ -2,7 +2,6 @@ import {
   IconAlignBoxCenterMiddle,
   IconEditCircle,
   IconHome,
-  IconPlant,
   IconSend,
 } from '@tabler/icons-react';
 
@@ -16,13 +15,13 @@ export const links: IMenuItem[] = [
       <IconHome className='aspect-square h-5 text-gray-600 dark:text-darkText' />
     ),
   },
-  {
-    label: 'About',
-    href: '/about',
-    icon: (
-      <IconPlant className='aspect-square h-5 text-gray-600 dark:text-darkText' />
-    ),
-  },
+  // {
+  //   label: 'About',
+  //   href: '/about',
+  //   icon: (
+  //     <IconPlant className='aspect-square h-5 text-gray-600 dark:text-darkText' />
+  //   ),
+  // },
   {
     label: 'Blog',
     href: '/blog',

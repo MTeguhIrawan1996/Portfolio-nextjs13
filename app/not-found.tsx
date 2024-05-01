@@ -6,7 +6,7 @@ export default function NotFound() {
   return (
     <>
       <div className='flex w-full flex-col items-center justify-center space-y-10 overflow-hidden  text-neutral-600 dark:text-neutral-300 lg:h-[90vh]'>
-        <h1 className='text-4xl font-semibold md:text-6xl'>Why am i here?</h1>
+        <h1 className='text-4xl font-semibold md:text-6xl'>Cooming Soon?</h1>
         <p className='text-center'>
           It seems like the page that you are looking for is no longer here.
         </p>

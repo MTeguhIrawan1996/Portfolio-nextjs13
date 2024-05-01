@@ -17,6 +17,7 @@ export default function NextImageFill({
   figureClassName,
   quality = 100,
   placeholder = 'empty',
+  loading = 'lazy',
   ...rest
 }: INextImageFillProps) {
   const [isLoading, setLoading] = React.useState(true);
@@ -46,7 +47,7 @@ export default function NextImageFill({
         sizes='(max-width: 768px) 100vw,
           (max-width: 1200px) 50vw,
           33vw'
-        loading='lazy'
+        loading={loading}
         onLoadingComplete={() => setLoading(false)}
         {...rest}
       />

@@ -37,8 +37,10 @@ const Card: React.FC<ICardProps> = ({
       />
       <NextImageFill
         src={logo ?? ''}
-        alt='Image'
+        alt={title}
+        priority={true}
         figureClassName='w-8 aspect-square'
+        loading='eager'
       />
       <div className='z-10 pt-6'>
         <h3 className='text-response-base text-primary-600 duration-300 group-hover:text-white dark:text-darkText'>

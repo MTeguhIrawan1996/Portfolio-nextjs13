@@ -3,7 +3,7 @@
 import { IconBookmarkEdit } from '@tabler/icons-react';
 import * as React from 'react';
 
-import { Divider } from '@/components/elements';
+import { AnimationDot, Divider } from '@/components/elements';
 
 import { OptimapSvg } from '@/utils/constants/svg';
 import clsxm from '@/utils/lib/clsxm';
@@ -18,10 +18,11 @@ const Header = () => {
       <div className='flex flex-row gap-4'>
         <div
           className={clsxm(
-            'group relative flex cursor-pointer flex-row items-center justify-center gap-2 ',
-            'before:aspect-square before:h-2 before:rounded-full before:bg-gray-400 before:content-[""]'
+            'group relative cursor-pointer',
+            'flex flex-row items-center justify-center gap-2 px-1'
           )}
         >
+          <AnimationDot />
           <OptimapSvg className='text-lg' />
           <span className='text-response-sm font-normal text-gray-600 dark:text-darkText'>
             Frontend Web Developer
