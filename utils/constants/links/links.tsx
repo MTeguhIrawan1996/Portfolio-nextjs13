@@ -30,8 +30,8 @@ export const links: IMenuItem[] = [
     ),
   },
   {
-    label: 'Project',
-    href: '/project',
+    label: 'Projects',
+    href: '/projects',
     icon: (
       <IconAlignBoxCenterMiddle className='aspect-square h-5 text-gray-600 dark:text-darkText' />
     ),

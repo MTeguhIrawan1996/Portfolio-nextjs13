@@ -3,7 +3,7 @@
 import { IconBookmarkEdit } from '@tabler/icons-react';
 import * as React from 'react';
 
-import { AnimationDot, Divider } from '@/components/elements';
+import { AnimationDot, Divider, PrimaryLink } from '@/components/elements';
 
 import { OptimapSvg } from '@/utils/constants/svg';
 import clsxm from '@/utils/lib/clsxm';
@@ -33,9 +33,14 @@ const Header = () => {
         </div>
         <div className='group relative flex cursor-pointer flex-row items-center justify-center gap-2 before:aspect-square before:h-2 before:rounded-full before:bg-gray-400 before:content-[""]'>
           <IconBookmarkEdit className='aspect-square h-5 text-gray-600 dark:text-darkText' />
-          <span className='text-response-sm font-normal text-gray-600 dark:text-darkText'>
-            View Resume
-          </span>
+          <PrimaryLink
+            href={`${process.env.NEXT_PUBLIC_URL}/doc/resume.pdf`}
+            openNewTab
+          >
+            <span className='text-response-sm font-normal text-gray-600 dark:text-darkText'>
+              View Resume
+            </span>
+          </PrimaryLink>
         </div>
       </div>
       <article className='prose-p:text-response-sm prose max-w-none prose-p:my-2 prose-p:font-normal prose-p:leading-normal prose-p:text-gray-500 prose-p:dark:text-darkText'>

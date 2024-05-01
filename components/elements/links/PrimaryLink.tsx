@@ -9,11 +9,9 @@ export type PrimaryLinkProps = {
 };
 
 const PrimaryLink = React.forwardRef<HTMLAnchorElement, PrimaryLinkProps>(
-  ({ href, openNewTab, children, ...rest }, ref) => {
+  ({ href, openNewTab = false, children, ...rest }, ref) => {
     const isNewTab =
-      openNewTab !== undefined
-        ? openNewTab
-        : href && !href.startsWith('/') && !href.startsWith('#');
+      openNewTab && !href.startsWith('/') && !href.startsWith('#');
 
     if (!isNewTab) {
       return (
