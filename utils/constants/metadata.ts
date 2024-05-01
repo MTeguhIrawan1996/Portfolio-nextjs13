@@ -4,10 +4,10 @@ export const METADATA = {
   keyword: 'teguh irawan, onedev',
   authors: {
     name: 'Teguh Irawan',
-    url: process.env.DOMAIN,
+    url: process.env.NEXT_PUBLIC_URL,
   },
   openGraph: {
-    url: process.env.DOMAIN,
+    url: process.env.NEXT_PUBLIC_URL,
     siteName: 'OneDev',
     locale: 'id-ID',
   },
