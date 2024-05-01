@@ -1,6 +1,6 @@
 import * as React from 'react';
 
-import Header from '@/components/features/home/common/section/Header';
+import { Header } from '@/components/elements';
 
 const ProjectsPage = () => {
   return (

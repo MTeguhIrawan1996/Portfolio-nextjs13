@@ -1,13 +1,13 @@
 import * as React from 'react';
 
+import { Header } from '@/components/elements';
 import CareerBook from '@/components/features/home/common/section/CareerBook';
-import Header from '@/components/features/home/common/section/Header';
 import Skills from '@/components/features/home/common/section/SkillsBook';
 
 const HomePage = () => {
   return (
     <>
-      <Header />
+      <Header withAbout />
       {/* <LastArticlesBook /> */}
       <CareerBook />
       <Skills />

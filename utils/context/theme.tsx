@@ -9,7 +9,7 @@ export default function ThemeProviderContext({
   children: ReactNode;
 }) {
   return (
-    <ThemeProvider attribute='class' defaultTheme='light'>
+    <ThemeProvider attribute='class' defaultTheme='dark'>
       {children}
     </ThemeProvider>
   );

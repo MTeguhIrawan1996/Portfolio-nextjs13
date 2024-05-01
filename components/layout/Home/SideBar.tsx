@@ -12,7 +12,7 @@ const SideBar = () => {
     <div
       className={clsxm(
         'hide-scrollbar w-full',
-        'lg:sticky lg:top-0 lg:h-[calc(100vh-32px)]  lg:w-[300px] lg:overflow-y-scroll lg:px-6 lg:pt-6'
+        'lg:sticky lg:top-0 lg:h-[calc(100vh-32px)] lg:w-[300px] lg:overflow-y-scroll lg:px-6 lg:pt-6'
       )}
     >
       <div className='flex flex-col items-center justify-start gap-4'>
@@ -25,8 +25,8 @@ const SideBar = () => {
             ))}
           </div>
           <Divider className='border-t-2' />
-          <div className='text-response-sm flex flex-row items-center justify-center gap-1 font-normal text-primary-600 dark:text-darkText'>
-            <span>© {new Date().getFullYear()} with</span>
+          <div className='text-response-sm hidden flex-row items-center justify-center gap-1 font-normal text-primary-600 dark:text-darkText lg:flex'>
+            <span>© {new Date().getFullYear()}</span>
             <span className='animate-pulse text-red-500'>💥</span>
             <span>by</span>
             <span className='cursor-pointer hover:dark:text-neutral-400'>

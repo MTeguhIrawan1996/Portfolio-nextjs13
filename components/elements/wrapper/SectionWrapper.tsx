@@ -33,7 +33,7 @@ const SectionWrapper: React.FC<ISectionWrapperProps> = ({
         </span>
       </div>
       <div className='py-6'>{children}</div>
-      <Divider className='border-t-2' />
+      <Divider className='my-1 border-t-2' />
     </div>
   );
 };
