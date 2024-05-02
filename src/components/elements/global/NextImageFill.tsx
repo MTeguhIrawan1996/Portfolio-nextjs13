@@ -48,7 +48,7 @@ export default function NextImageFill({
           (max-width: 1200px) 50vw,
           33vw'
         loading={loading}
-        onLoadingComplete={() => setLoading(false)}
+        onLoad={() => setLoading(false)}
         {...rest}
       />
     </figure>

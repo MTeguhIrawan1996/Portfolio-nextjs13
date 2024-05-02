@@ -4,20 +4,27 @@ module.exports = {
     es2021: true,
     node: true,
   },
-  plugins: ['@typescript-eslint', 'simple-import-sort', 'unused-imports'],
+  plugins: [
+    '@typescript-eslint',
+    'simple-import-sort',
+    'unused-imports',
+    'testing-library',
+    'jest',
+  ],
   extends: [
     'eslint:recommended',
-    'next',
-    'next/core-web-vitals',
     'plugin:@typescript-eslint/recommended',
+    'next',
     'prettier',
+    // 'mantine',
+    'plugin:jest/recommended',
   ],
   ignorePatterns: [
     '!.config.js',
     'cz-config.js',
     '!.prettierrc.js',
-    '!**/dev.ecosystem.config.js',
-    '!.gitlab-ci',
+    '!.eslintrc.js',
+    '!.prettierrc.js',
   ],
   rules: {
     'no-unused-vars': 'off',
@@ -82,10 +89,20 @@ module.exports = {
         ],
       },
     ],
+    '@typescript-eslint/no-explicit-any': 'off',
     //#endregion  //*======== Import Sort ===========
   },
   globals: {
     React: true,
     JSX: true,
+  },
+  overrides: [
+    {
+      files: ['**/?(*.)+(spec|test).[jt]s?(x)'],
+      extends: ['plugin:testing-library/react'],
+    },
+  ],
+  parserOptions: {
+    project: './tsconfig.json',
   },
 };
