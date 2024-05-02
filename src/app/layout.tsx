@@ -5,6 +5,7 @@ import './globals.css';
 import { HomeLayout } from '@/components/layout';
 
 import { METADATA } from '@/utils/constants/metadata';
+import TanStackQueryProvider from '@/utils/context/TanStackQueryProvider';
 import ThemeProviderContext from '@/utils/context/theme';
 
 export const metadata: Metadata = {
@@ -39,9 +40,11 @@ export default function RootLayout({
   return (
     <html lang='id' suppressHydrationWarning={true}>
       <body>
-        <ThemeProviderContext>
-          <HomeLayout>{children}</HomeLayout>
-        </ThemeProviderContext>
+        <TanStackQueryProvider>
+          <ThemeProviderContext>
+            <HomeLayout>{children}</HomeLayout>
+          </ThemeProviderContext>
+        </TanStackQueryProvider>
       </body>
     </html>
   );
