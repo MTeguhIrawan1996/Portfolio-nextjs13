@@ -11,36 +11,30 @@ export const links: IMenuItem[] = [
   {
     label: 'Home',
     href: '/',
-    icon: (
-      <IconHome className='aspect-square h-5 text-gray-600 dark:text-darkText' />
-    ),
+    icon: <IconHome className='aspect-square h-5 text-secondary' />,
   },
   // {
   //   label: 'About',
   //   href: '/about',
   //   icon: (
-  //     <IconPlant className='aspect-square h-5 text-gray-600 dark:text-darkText' />
+  //     <IconPlant className='aspect-square h-5 text-secondary' />
   //   ),
   // },
   {
     label: 'Blog',
     href: '/blog',
-    icon: (
-      <IconEditCircle className='aspect-square h-5 text-gray-600 dark:text-darkText' />
-    ),
+    icon: <IconEditCircle className='aspect-square h-5 text-secondary' />,
   },
   {
     label: 'Projects',
     href: '/projects',
     icon: (
-      <IconAlignBoxCenterMiddle className='aspect-square h-5 text-gray-600 dark:text-darkText' />
+      <IconAlignBoxCenterMiddle className='aspect-square h-5 text-secondary' />
     ),
   },
   {
     label: 'Contact',
     href: '/contact',
-    icon: (
-      <IconSend className='aspect-square h-5 text-gray-600 dark:text-darkText' />
-    ),
+    icon: <IconSend className='aspect-square h-5 text-secondary' />,
   },
 ];

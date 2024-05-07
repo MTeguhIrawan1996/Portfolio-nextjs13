@@ -54,6 +54,7 @@
     "commitizen": "^4.3.0",
     "commitlint-config-gitmoji": "^2.3.1",
     "cz-customizable": "^7.0.0",
+    "daisyui": "^4.10.5",
     "eslint": "^8.41.0",
     "eslint-config-next": "^14.2.3",
     "eslint-config-prettier": "^9.0.0",

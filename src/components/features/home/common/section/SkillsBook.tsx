@@ -2,7 +2,7 @@ import * as React from 'react';
 import Marquee from 'react-fast-marquee';
 
 import { SectionWrapper } from '@/components/elements';
-import SkillBox from '@/components/features/home/common/elements/skillBox';
+import SkillBox from '@/components/features/home/common/elements/SkillBox';
 
 import { STACKS } from '@/utils/constants/skills';
 
@@ -14,7 +14,7 @@ const Skills = () => {
       icon='mdi:robot-outline'
     >
       <div className='relative flex flex-col space-y-1 overflow-x-hidden px-2 py-2'>
-        <div className='absolute inset-0 z-40 bg-primary-400/30 opacity-10 dark:bg-dark/75 dark:opacity-40' />
+        <div className='bg-primary-400/30 dark:bg-dark/75 absolute inset-0 z-40 opacity-10 dark:opacity-40' />
         {Array.from({ length: 2 }, (_, i) => {
           const shuffledStacks = STACKS.slice().sort(() => Math.random() - 0.5);
           return (

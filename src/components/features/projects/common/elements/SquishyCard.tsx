@@ -38,7 +38,7 @@ const Card = ({ title, imgUrl, tags, stacks }: IProps) => {
           scale: 1.05,
         },
       }}
-      className='relative h-96 w-full overflow-hidden rounded-xl bg-gradient-to-r from-primary-600 to-primary-400 p-8 shadow-lg dark:from-primary-600 dark:to-primary-800'
+      className='from-primary-600 to-primary-400 dark:from-primary-600 dark:to-primary-800 relative h-96 w-full overflow-hidden rounded-xl bg-gradient-to-r p-8 shadow-lg'
     >
       <div className='relative z-10 flex h-full flex-col items-start justify-end gap-1 text-white'>
         <span className='mb-1 block w-fit rounded-full bg-white/30 px-3 py-0.5 text-sm font-light text-white'>

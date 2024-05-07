@@ -1,3 +1,5 @@
+'use client';
+
 import * as React from 'react';
 
 import SideBar from '@/components/layout/Home/SideBar';

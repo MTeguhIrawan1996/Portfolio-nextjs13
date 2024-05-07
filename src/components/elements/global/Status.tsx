@@ -1,14 +1,14 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useTheme } from 'next-themes';
 
 import AnimationDot from '@/components/elements/ui-animation/AnimationDot';
 
+import { useTheme } from '@/utils/context/ThemeProvider';
 import useHasMounted from '@/utils/hooks/useHasMounted';
 
 export default function Status() {
-  const { resolvedTheme } = useTheme();
+  const { theme } = useTheme();
   const mounted = useHasMounted();
   if (!mounted) return null;
   return (
@@ -17,22 +17,20 @@ export default function Status() {
       animate={{ height: 42, opacity: 1 }}
       transition={{ duration: 0.5 }}
       className={`absolute ${
-        resolvedTheme === 'light'
+        theme === 'light'
           ? 'inverted-border-radius'
           : 'inverted-border-radius-dark'
-      } left-0 top-0 z-10 rounded-br-xl bg-red-500 py-2 pr-2 dark:bg-dark`}
+      } left-0 top-0 z-10 rounded-br-xl py-2 pr-2`}
     >
       <motion.div
         initial={{ opacity: 0, scale: 0.5 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5, delay: 0.5 }}
         data-testid='available-hire'
-        className='relative flex items-center gap-2 rounded-xl border border-neutral-300 bg-white px-2 py-1 dark:border-neutral-700 dark:bg-dark'
+        className='status-dot relative flex items-center gap-2 rounded-xl border border-neutral-300 px-2 py-1'
       >
         <AnimationDot />
-        <span className='text-xs text-neutral-600 dark:text-neutral-400'>
-          Hire me.
-        </span>
+        <span className='text-xs text-secondary'>Hire me.</span>
       </motion.div>
     </motion.div>
   );

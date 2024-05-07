@@ -6,7 +6,7 @@ import { HomeLayout } from '@/components/layout';
 
 import { METADATA } from '@/utils/constants/metadata';
 import TanStackQueryProvider from '@/utils/context/TanStackQueryProvider';
-import ThemeProviderContext from '@/utils/context/theme';
+import { ThemeProvider } from '@/utils/context/ThemeProvider';
 
 export const metadata: Metadata = {
   metadataBase: new URL(
@@ -45,9 +45,11 @@ export default function RootLayout({
     <html lang='id' suppressHydrationWarning={true}>
       <body>
         <TanStackQueryProvider>
-          <ThemeProviderContext>
+          {/* <ThemeProviderContext> */}
+          <ThemeProvider>
             <HomeLayout>{children}</HomeLayout>
-          </ThemeProviderContext>
+          </ThemeProvider>
+          {/* </ThemeProviderContext> */}
         </TanStackQueryProvider>
       </body>
     </html>

@@ -2,31 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --tw-color-primary-50: 249 250 251;
-  --tw-color-primary-100: 243 244 246;
-  --tw-color-primary-200: 229 231 235;
-  --tw-color-primary-300: 209 213 219;
-  --tw-color-primary-400: 156 163 175;
-  --tw-color-primary-500: 107 114 128;
-  --tw-color-primary-600: 75 85 99;
-  --tw-color-primary-700: 55 65 81;
-  --tw-color-primary-800: 31 41 55;
-  --tw-color-primary-900: 17 24 39;
-  --tw-color-primary-950: 3 7 18;
-  --color-primary-50: rgb(var(--tw-color-primary-50)); /* #f9fafb */
-  --color-primary-100: rgb(var(--tw-color-primary-100)); /* #f3f4f6 */
-  --color-primary-200: rgb(var(--tw-color-primary-200)); /* #e5e7eb */
-  --color-primary-300: rgb(var(--tw-color-primary-300)); /* #d1d5db */
-  --color-primary-400: rgb(var(--tw-color-primary-400)); /* #9ca3af */
-  --color-primary-500: rgb(var(--tw-color-primary-500)); /* #6b7280 */
-  --color-primary-600: rgb(var(--tw-color-primary-600)); /* #4b5563 */
-  --color-primary-700: rgb(var(--tw-color-primary-700)); /* #374151 */
-  --color-primary-800: rgb(var(--tw-color-primary-800)); /* #1f2937 */
-  --color-primary-900: rgb(var(--tw-color-primary-900)); /* #111827 */
-  --color-primary-950: rgb(var(--tw-color-primary-950)); /* #030712 */
-}
-
 /* Hide scrollbar for IE, Edge and Firefox */
 /* Hide scrollbar for Chrome, Safari and Opera */
 .hide-scrollbar::-webkit-scrollbar {
@@ -39,10 +14,10 @@
 }
 
 .inverted-border-radius {
-  background: white;
+  background: #ffffff;
 }
 .inverted-border-radius-dark {
-  background: white;
+  background: #1d232a;
 }
 
 .inverted-border-radius::before {
@@ -54,7 +29,7 @@
   width: 25px;
   left: 0;
   border-top-left-radius: 12px;
-  box-shadow: 0 -25px 0 0 white;
+  box-shadow: 0 -25px 0 0 #ffffff;
   z-index: 0;
 }
 
@@ -67,7 +42,7 @@
   width: 25px;
   right: -25px;
   border-top-left-radius: 12px;
-  box-shadow: 0 -25px 0 0 white;
+  box-shadow: 0 -25px 0 0 #ffffff;
   z-index: 0;
 }
 
@@ -80,7 +55,7 @@
   width: 25px;
   left: 0;
   border-top-left-radius: 12px;
-  box-shadow: 0 -25px 0 0 #121212;
+  box-shadow: 0 -25px 0 0 #1d232a;
   z-index: 0;
 }
 
@@ -93,7 +68,7 @@
   width: 25px;
   right: -25px;
   border-top-left-radius: 12px;
-  box-shadow: 0 -25px 0 0 #121212;
+  box-shadow: 0 -25px 0 0 #1d232a;
   z-index: 0;
 }
 
@@ -115,33 +90,33 @@
   /* #region  /**=========== Typography =========== */
 
   .h0 {
-    @apply font-primary text-3xl font-bold dark:text-darkText md:text-5xl;
+    @apply font-primary text-3xl font-bold md:text-5xl;
   }
 
   h1,
   .h1 {
-    @apply font-primary text-2xl font-bold dark:text-darkText md:text-4xl;
+    @apply font-primary text-2xl font-bold md:text-4xl;
   }
 
   h2,
   .h2 {
-    @apply font-primary text-xl font-bold dark:text-darkText md:text-3xl;
+    @apply font-primary text-xl font-bold md:text-3xl;
   }
 
   h3,
   .h3 {
-    @apply font-primary text-lg font-bold dark:text-darkText md:text-2xl;
+    @apply font-primary text-lg font-bold md:text-2xl;
   }
 
   h4,
   .h4 {
-    @apply font-primary text-base font-bold dark:text-darkText md:text-xl;
+    @apply font-primary text-base font-bold md:text-xl;
   }
 
   body,
   p,
   .p {
-    @apply font-primary text-sm dark:text-darkText md:text-base;
+    @apply font-primary text-sm md:text-base;
   }
 
   .text-response-sm {
@@ -161,4 +136,10 @@
   }
 
   /* #endregion  /**======== Typography =========== */
+
+  /* DARK THEME */
+
+  [data-theme='dark'] .brightness-base {
+    @apply brightness-50;
+  }
 }

@@ -25,15 +25,15 @@ const Card: React.FC<ICardProps> = ({
   return (
     <div
       className={clsxm(
-        'group relative flex w-full flex-col gap-2 overflow-hidden rounded bg-white p-4 ring-[1px] ring-inset ring-primary-300 dark:bg-dark dark:ring-primary-500',
-        'hover:shadow-md hover:shadow-primary-600',
+        'group relative flex w-full flex-col gap-2 overflow-hidden rounded p-4 ring-[1px] ring-inset ring-secondary',
+        'hover:shadow-md hover:shadow-secondary',
         'transition-all duration-300'
       )}
     >
-      <div className='absolute inset-0 translate-y-[100%] bg-gradient-to-r from-primary-600 to-dark transition-transform duration-300 group-hover:translate-y-[0%]' />
+      <div className='absolute inset-0 translate-y-[100%] bg-gradient-to-r from-accent to-primary transition-transform duration-300 group-hover:translate-y-[0%]' />
       <Icon
         icon={IconCard}
-        className='absolute -right-10 -top-12 text-9xl text-primary-400 transition-all duration-300 group-hover:rotate-12 group-hover:text-primary-500'
+        className='absolute -right-10 -top-12 text-9xl text-primary transition-all duration-200 group-hover:rotate-12 group-hover:text-accent'
       />
       <NextImageFill
         src={logo ?? ''}
@@ -43,14 +43,14 @@ const Card: React.FC<ICardProps> = ({
         loading='eager'
       />
       <div className='z-10 pt-6'>
-        <h3 className='text-response-base text-primary-600 duration-300 group-hover:text-white dark:text-darkText'>
+        <h3 className='text-response-base text-primary duration-200 group-hover:text-secondary'>
           {title}
         </h3>
-        <p className='text-response-sm font-normal text-primary-400 duration-300 group-hover:text-white dark:text-primary-400'>
+        <p className='text-response-sm font-normal text-primary duration-200 group-hover:text-secondary'>
           {subTitle}
         </p>
       </div>
-      <h4 className='z-10 text-[12px] font-light text-primary-400 duration-300 group-hover:text-white dark:text-primary-400'>
+      <h4 className='z-10 text-[12px] font-light text-primary duration-200 group-hover:text-secondary'>
         {date}
       </h4>
     </div>

@@ -10,6 +10,7 @@ interface ISectionWrapperProps {
   title: string;
   subTitle: string;
   icon?: string;
+  withDivider?: boolean;
 }
 
 const SectionWrapper: React.FC<ISectionWrapperProps> = ({
@@ -17,6 +18,7 @@ const SectionWrapper: React.FC<ISectionWrapperProps> = ({
   subTitle,
   title,
   icon = 'tabler:books',
+  withDivider = false,
 }) => {
   return (
     <div className='flex w-full flex-col'>
@@ -24,16 +26,16 @@ const SectionWrapper: React.FC<ISectionWrapperProps> = ({
         <div className='flex flex-row items-center gap-2'>
           <Icon
             icon={icon}
-            className='text-2xl text-gray-600 dark:text-darkText'
+            className='dark:text-darkText text-2xl text-primary'
           />
-          <h1 className='h4 text-primary-700'>{title}</h1>
+          <h1 className='h4 text-primary'>{title}</h1>
         </div>
-        <span className='text-response-sm font-normal text-primary-600 dark:text-darkText'>
+        <span className='text-response-sm font-normal text-secondary'>
           {subTitle}
         </span>
       </div>
       <div className='py-6'>{children}</div>
-      <Divider className='my-1 border-t-2' />
+      {withDivider && <Divider className='my-1 border-t-2' />}
     </div>
   );
 };
