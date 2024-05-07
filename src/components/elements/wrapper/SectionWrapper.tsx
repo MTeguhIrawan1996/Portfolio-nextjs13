@@ -21,7 +21,7 @@ const SectionWrapper: React.FC<ISectionWrapperProps> = ({
   withDivider = false,
 }) => {
   return (
-    <div className='flex w-full flex-col'>
+    <section className='flex w-full flex-col'>
       <div className='flex flex-col gap-1'>
         <div className='flex flex-row items-center gap-2'>
           <Icon icon={icon} className='text-2xl text-primary' />
@@ -33,7 +33,7 @@ const SectionWrapper: React.FC<ISectionWrapperProps> = ({
       </div>
       <div className='py-6'>{children}</div>
       {withDivider && <Divider className='my-1 border-t-2' />}
-    </div>
+    </section>
   );
 };
 

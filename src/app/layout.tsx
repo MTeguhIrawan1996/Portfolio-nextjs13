@@ -42,7 +42,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang='id' suppressHydrationWarning={true}>
+    <html lang='id'>
       <body>
         <TanStackQueryProvider>
           {/* <ThemeProviderContext> */}

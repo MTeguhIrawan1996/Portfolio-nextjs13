@@ -21,10 +21,10 @@ export default function HomeLayout({ children }: LayoutsProps) {
       >
         <main
           className={clsxm(
-            'hide-scrollbar w-full lg:h-[calc(100vh-32px)] lg:flex-1 lg:overflow-y-scroll lg:pt-6'
+            'hide-scrollbar h-full w-full lg:h-[calc(100vh-32px)] lg:flex-1 lg:overflow-y-scroll lg:pt-6'
           )}
         >
-          <div className='flex h-screen flex-col items-start justify-start gap-4'>
+          <div className='flex h-full flex-col items-start justify-start gap-4 lg:h-screen'>
             {children}
           </div>
         </main>
