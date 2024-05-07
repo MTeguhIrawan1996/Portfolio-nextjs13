@@ -5,7 +5,7 @@ import * as React from 'react';
 
 const SocialLinkList = () => {
   return (
-    <div className='bg-primary-100 dark:bg-primary-400 rounded-xl px-4 py-6'>
+    <div className='rounded-xl bg-accent px-4 py-6'>
       <div className='mx-auto max-w-7xl'>
         <ClipPathLinks />
       </div>
@@ -15,15 +15,15 @@ const SocialLinkList = () => {
 
 const ClipPathLinks = () => {
   return (
-    <div className='divide-primary-300 border-primary-300 divide-y border'>
-      <div className='divide-primary-300 grid grid-cols-2 divide-x'>
+    <div className='divide-y divide-secondary/50 border border-secondary/50'>
+      <div className='grid grid-cols-2 divide-x divide-secondary/50'>
         <LinkBox icon='mdi:github' href='https://github.com/MTeguhIrawan1996' />
         <LinkBox
           icon='mdi:linkedin'
           href='https://www.linkedin.com/in/irawan-m-774762229/'
         />
       </div>
-      <div className='divide-primary-300 grid grid-cols-4 divide-x'>
+      <div className='grid grid-cols-4 divide-x divide-secondary/50'>
         <LinkBox
           icon='ic:baseline-tiktok'
           href='https://www.tiktok.com/@onedev0?_t=8m2FF4Eo9Nx&_r=1'
@@ -133,16 +133,13 @@ const LinkBox = ({ icon, href }) => {
       }}
       className='relative grid h-20 w-full place-content-center sm:h-28 md:h-24'
     >
-      <Icon
-        icon={icon}
-        className='dark:text-darkText text-xl text-gray-600 md:text-2xl'
-      />
+      <Icon icon={icon} className='text-xl text-secondary md:text-2xl' />
       <div
         ref={scope}
         style={{
           clipPath: BOTTOM_RIGHT_CLIP,
         }}
-        className='absolute inset-0 grid place-content-center bg-neutral-900 text-white'
+        className='absolute inset-0 grid place-content-center bg-primary text-base-100'
       >
         <Icon icon={icon} className='text-xl md:text-2xl' />
       </div>

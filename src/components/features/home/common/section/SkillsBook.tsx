@@ -14,7 +14,7 @@ const Skills = () => {
       icon='mdi:robot-outline'
     >
       <div className='relative flex flex-col space-y-1 overflow-x-hidden px-2 py-2'>
-        <div className='bg-primary-400/30 dark:bg-dark/75 absolute inset-0 z-40 opacity-10 dark:opacity-40' />
+        <div className='absolute inset-0 z-40 bg-primary/10 opacity-10' />
         {Array.from({ length: 2 }, (_, i) => {
           const shuffledStacks = STACKS.slice().sort(() => Math.random() - 0.5);
           return (

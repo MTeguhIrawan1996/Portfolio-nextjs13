@@ -25,13 +25,11 @@ const SideBar = () => {
             ))}
           </div>
           <Divider className='border-t-2' />
-          <div className='text-response-sm text-primary-600 dark:text-darkText hidden flex-row items-center justify-center gap-1 font-normal lg:flex'>
+          <div className='text-response-sm hidden flex-row items-center justify-center gap-1 font-normal text-primary lg:flex'>
             <span>© {new Date().getFullYear()}</span>
             <span className='animate-pulse text-red-500'>💥</span>
             <span>by</span>
-            <span className='cursor-pointer hover:dark:text-neutral-400'>
-              onedev
-            </span>
+            <span className='cursor-pointer hover:text-secondary'>onedev</span>
           </div>
         </nav>
       </div>

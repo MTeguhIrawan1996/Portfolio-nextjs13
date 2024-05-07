@@ -17,7 +17,7 @@ const ContactForm = () => {
         placeholder='Message'
         className='textarea textarea-bordered textarea-sm col-span-2 w-full'
       />
-      <button className='bg-primary-600 text-light hover:text-primary-700 btn btn-xs col-span-2 w-full md:btn-sm'>
+      <button className='text-light btn-secondary/50 btn btn-xs col-span-2 w-full text-secondary md:btn-sm'>
         {/* <span className='loading loading-spinner loading-xs' /> */}
         Send
       </button>

@@ -142,4 +142,7 @@
   [data-theme='dark'] .brightness-base {
     @apply brightness-50;
   }
+  [data-theme='dark'] .squishy-brightness {
+    @apply brightness-[1] grayscale;
+  }
 }

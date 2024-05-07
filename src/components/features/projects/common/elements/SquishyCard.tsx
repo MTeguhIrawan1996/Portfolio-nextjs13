@@ -38,10 +38,10 @@ const Card = ({ title, imgUrl, tags, stacks }: IProps) => {
           scale: 1.05,
         },
       }}
-      className='from-primary-600 to-primary-400 dark:from-primary-600 dark:to-primary-800 relative h-96 w-full overflow-hidden rounded-xl bg-gradient-to-r p-8 shadow-lg'
+      className='relative h-96 w-full overflow-hidden rounded-xl bg-accent p-8 shadow-lg'
     >
-      <div className='relative z-10 flex h-full flex-col items-start justify-end gap-1 text-white'>
-        <span className='mb-1 block w-fit rounded-full bg-white/30 px-3 py-0.5 text-sm font-light text-white'>
+      <div className='relative z-10 flex h-full flex-col items-start justify-end gap-1'>
+        <span className='mb-1 block w-fit rounded-full bg-primary/50 px-3 py-0.5 text-xs font-light text-accent'>
           {tags?.[0]}
         </span>
         <motion.span
@@ -55,7 +55,7 @@ const Card = ({ title, imgUrl, tags, stacks }: IProps) => {
             duration: 1,
             ease: 'backInOut',
           }}
-          className='block origin-top-left text-xl font-black leading-[1.1] md:text-2xl'
+          className='block origin-top-left text-lg font-black leading-[1.1] text-primary md:text-xl'
         >
           {title}
         </motion.span>
@@ -104,7 +104,7 @@ const Background = ({ imgUrl }: { imgUrl: SanityImageSource }) => {
           <NextImageFill
             alt='backdrop-image'
             src={imageProps.src ? imageProps.src : BackdropImage}
-            figureClassName='h-full w-full rounded-lg overflow-hidden dark:grayscale dark:brightness-[1]'
+            figureClassName='h-full w-full rounded-lg overflow-hidden squishy-brightness'
             imageClassName='scale-125'
           />
         </motion.div>

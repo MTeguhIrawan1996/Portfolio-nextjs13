@@ -9,11 +9,7 @@ interface IDividerProps {
 export default function Divider({ className }: IDividerProps) {
   return (
     <div
-      className={clsxm(
-        'my-4',
-        'border-t border-gray-300 dark:border-neutral-700',
-        className
-      )}
+      className={clsxm('my-4', 'border-t border-secondary/50', className)}
       data-testid='breakline'
     />
   );

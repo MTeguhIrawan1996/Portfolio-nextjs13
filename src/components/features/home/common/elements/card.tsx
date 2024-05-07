@@ -25,7 +25,7 @@ const Card: React.FC<ICardProps> = ({
   return (
     <div
       className={clsxm(
-        'group relative flex w-full flex-col gap-2 overflow-hidden rounded p-4 ring-[1px] ring-inset ring-secondary',
+        'group relative flex w-full flex-col gap-2 overflow-hidden rounded p-4 ring-[1px] ring-inset ring-secondary/50',
         'hover:shadow-md hover:shadow-secondary',
         'transition-all duration-300'
       )}
