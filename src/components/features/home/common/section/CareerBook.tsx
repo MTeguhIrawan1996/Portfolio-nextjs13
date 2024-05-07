@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 import { SectionWrapper } from '@/components/elements';
-import Card from '@/components/features/home/common/elements/Card';
+import CareerCard from '@/components/features/home/common/elements/CareerCard';
 
 import { HpoImage, OptimapImage, SthImage } from '@/utils/constants/imageCloud';
 
@@ -39,7 +39,7 @@ const CareerBook = () => {
     >
       <div className='grid grid-cols-1 gap-4 p-2 md:grid-cols-2'>
         {CareerData.map(({ title, subTitle, iconCard, date, logo }, i) => (
-          <Card
+          <CareerCard
             title={title}
             subTitle={subTitle}
             iconCard={iconCard}

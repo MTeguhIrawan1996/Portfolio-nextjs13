@@ -2,7 +2,7 @@ import * as React from 'react';
 import Marquee from 'react-fast-marquee';
 
 import { SectionWrapper } from '@/components/elements';
-import SkillBox from '@/components/features/home/common/elements/SkillBox';
+import SkillBadge from '@/components/features/home/common/elements/SkillBadge';
 
 import { STACKS } from '@/utils/constants/skills';
 
@@ -26,7 +26,7 @@ const Skills = () => {
             >
               <div className='flex space-x-3 py-3'>
                 {shuffledStacks.map(({ name, icon, className }, index) => (
-                  <SkillBox
+                  <SkillBadge
                     name={name}
                     icon={icon}
                     className={className}
