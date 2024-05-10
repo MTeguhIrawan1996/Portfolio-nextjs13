@@ -1,7 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   images: {
-    domains: ['res.cloudinary.com', 'cdn.sanity.io'],
+    domains: ['res.cloudinary.com', 'cdn.sanity.io', 'media.dev.to'],
   },
   // SVGR
   webpack(config) {

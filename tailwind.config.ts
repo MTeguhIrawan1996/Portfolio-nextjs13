@@ -39,9 +39,14 @@ const config: Config = {
           '60%': { transform: 'rotate(0.0deg)' },
           '100%': { transform: 'rotate(0.0deg)' },
         },
+        rightInfinite: {
+          '0%': { transform: 'translateX(-150px)' },
+          '100%': { transform: 'translateX(150px)' },
+        },
       },
       animation: {
         'waving-hand': 'wave 2s linear infinite',
+        'right-infinite': 'rightInfinite 2s linear infinite',
       },
     },
   },
@@ -83,6 +88,7 @@ const config: Config = {
         },
       },
     ], // false: only light + dark | true: all themes | array: specific themes like this ["light", "dark", "cupcake"]
+    darkTheme: 'dark',
   },
 };
 export default config;
