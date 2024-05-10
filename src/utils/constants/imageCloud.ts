@@ -10,3 +10,7 @@ export const OptimapImage =
   'https://res.cloudinary.com/dl0neqfcw/image/upload/v1697122073/Portfolio/large-og_iyjoln.webp';
 export const SthImage =
   'https://res.cloudinary.com/dl0neqfcw/image/upload/v1697122939/Portfolio/2796_aib7y1.webp';
+export const ExampleBlog =
+  'https://res.cloudinary.com/dl0neqfcw/image/upload/v1715329889/Portfolio/Blue_White_Futuristic_Technology_Facebook_Cover_1_vnznak.webp';
+export const ExampleBlog2 =
+  'https://res.cloudinary.com/dl0neqfcw/image/upload/v1715330434/Portfolio/2_vqik3r.webp';

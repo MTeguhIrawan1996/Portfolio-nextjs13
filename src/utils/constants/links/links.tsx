@@ -21,8 +21,8 @@ export const links: IMenuItem[] = [
   //   ),
   // },
   {
-    label: 'Blog',
-    href: '/blog',
+    label: 'Blogs',
+    href: '/blogs',
     icon: <IconEditCircle className='aspect-square h-5 text-secondary' />,
   },
   {
