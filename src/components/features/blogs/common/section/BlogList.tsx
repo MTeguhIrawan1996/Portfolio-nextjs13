@@ -29,20 +29,20 @@ const BlogList = () => {
                 key={`${val.id}`}
                 onClick={() => router.push(`/blogs/${val.slug}`)}
               >
-                <div className='relative z-10 overflow-hidden rounded-2xl'>
+                <div className='relative z-10 w-full overflow-hidden rounded-2xl'>
                   <div className='h-52 w-full'>
                     <NextImageFill
                       src={val.social_image || ExampleBlog}
-                      alt='car!'
+                      alt={val.title}
                       figureClassName='h-full w-full'
                     />
                   </div>
-                  <div className='card-body !items-start !justify-start gap-4'>
+                  <div className='card-body items-start justify-start gap-4'>
                     <div className='flex flex-col gap-1'>
                       <h2 className='card-title !mb-0 text-gray-300'>
                         {val.title}
                       </h2>
-                      <span className='text-xs text-gray-300'>
+                      <span className='text-left text-xs text-gray-300'>
                         {dayjs(val.published_at).format('MMM D, YYYY')}
                       </span>
                     </div>
