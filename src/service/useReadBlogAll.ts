@@ -1,8 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import axios from 'axios';
 
-import { DEVTO_BLOG_API } from '@/utils/constants/staticUrl';
-
 export type BlogResponse = {
   id: number;
   title: string;
@@ -15,7 +13,9 @@ export type BlogResponse = {
 
 export const readAllBlog = async () => {
   try {
-    const response = await axios.get(DEVTO_BLOG_API);
+    const response = await axios.get(
+      `${process.env.NEXT_PUBLIC_DEVTO_BASE_URL}?username=mteguhirawan1996`
+    );
     return response.data;
   } catch (err: any) {
     return Promise.reject(err);

@@ -39,7 +39,7 @@ const BlogList = () => {
                   </div>
                   <div className='card-body items-start justify-start gap-4'>
                     <div className='flex flex-col gap-1'>
-                      <h2 className='card-title !mb-0 text-gray-300'>
+                      <h2 className='card-title !mb-0 text-left text-gray-300'>
                         {val.title}
                       </h2>
                       <span className='text-left text-xs text-gray-300'>

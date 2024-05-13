@@ -8,9 +8,10 @@ import { Divider } from '@/components/elements';
 interface ISectionWrapperProps {
   children: React.ReactNode;
   title: string;
-  subTitle: string;
+  subTitle?: string;
   icon?: string;
   withDivider?: boolean;
+  otherContent?: () => React.ReactNode;
 }
 
 const SectionWrapper: React.FC<ISectionWrapperProps> = ({
@@ -19,6 +20,7 @@ const SectionWrapper: React.FC<ISectionWrapperProps> = ({
   title,
   icon = 'tabler:books',
   withDivider = false,
+  otherContent,
 }) => {
   return (
     <section className='flex w-full flex-col'>
@@ -27,9 +29,12 @@ const SectionWrapper: React.FC<ISectionWrapperProps> = ({
           <Icon icon={icon} className='text-2xl text-primary' />
           <h1 className='h4 text-primary'>{title}</h1>
         </div>
-        <span className='text-response-sm font-normal text-secondary'>
-          {subTitle}
-        </span>
+        {subTitle && (
+          <span className='text-response-sm font-normal text-secondary'>
+            {subTitle}
+          </span>
+        )}
+        {otherContent && otherContent()}
       </div>
       <div className='py-6'>{children}</div>
       {withDivider && <Divider className='my-1 border-t-2' />}
