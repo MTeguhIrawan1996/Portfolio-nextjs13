@@ -1,3 +1,4 @@
+import { GoogleAnalytics } from '@next/third-parties/google';
 import type { Metadata } from 'next';
 
 import './globals.css';
@@ -52,6 +53,7 @@ export default function RootLayout({
           {/* </ThemeProviderContext> */}
         </TanStackQueryProvider>
       </body>
+      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || ''} />
     </html>
   );
 }

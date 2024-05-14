@@ -15,8 +15,7 @@ interface IMenuItemProps {
 
 const MenuItem: React.FC<IMenuItemProps> = ({ label, icon: Icon, href }) => {
   const pathname = usePathname();
-
-  const cleanedPath = pathname.split('/').slice(0, 3).join('/');
+  const cleanedPath = pathname.split('/').slice(0, 2).join('/');
 
   return (
     <PrimaryLink
