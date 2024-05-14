@@ -1,3 +1,4 @@
+import CodeBlock from '@/components/elements/global/CodeBlock';
 import Divider from '@/components/elements/global/Divider';
 import Header from '@/components/elements/global/Header';
 import NextImageFill from '@/components/elements/global/NextImageFill';
@@ -9,6 +10,7 @@ import SectionWrapper from '@/components/elements/wrapper/SectionWrapper';
 
 export {
   AnimationDot,
+  CodeBlock,
   Divider,
   Header,
   NextImageFill,

@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { BlogDetailProps } from '@/types/global';
+import { BlogDetailProps, BlogItem } from '@/types/global';
 
 type Props = {
   params: { slug: string };
@@ -17,4 +17,24 @@ export async function getBlogDetail({
     throw new Error('faild to fetch');
   }
   return response.data;
+}
+
+export async function getBlogViews(params: string) {
+  const response = await axios.get(
+    `${process.env.NEXT_PUBLIC_DEVTO_BASE_URL}/me/all`,
+    {
+      headers: {
+        'api-key': process.env.NEXT_PUBLIC_DEVTO_KEY,
+      },
+    }
+  );
+
+  if (response.status !== 200) {
+    throw new Error('faild to fetch');
+  }
+  const data = response.data;
+
+  const findArticle = data?.find((blog: BlogItem) => blog.slug === params);
+  const page_views_count: number = findArticle?.page_views_count;
+  return page_views_count;
 }

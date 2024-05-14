@@ -1,33 +1,52 @@
 'use client';
 
+import { Icon } from '@iconify/react';
 import dayjs from 'dayjs';
 import * as React from 'react';
 import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
-import { NextImageFill, SectionWrapper } from '@/components/elements';
+import {
+  CodeBlock,
+  NextImageFill,
+  SectionWrapper,
+} from '@/components/elements';
 
 import { BlogDetailProps } from '@/types/global';
 
 interface IBlogDetailContentProps {
   content: BlogDetailProps;
+  pageViewCount: number;
 }
 
-const BlogDetailContent: React.FC<IBlogDetailContentProps> = ({ content }) => {
+const BlogDetailContent: React.FC<IBlogDetailContentProps> = ({
+  content,
+  pageViewCount,
+}) => {
   return (
     <SectionWrapper
       title={content.title}
       otherContent={() => (
-        <div className='text-response-sm relative flex cursor-pointer flex-row gap-2 font-normal text-secondary'>
+        <div className='text-response-sm relative flex cursor-pointer flex-row justify-between font-normal text-secondary'>
           <span>{`Published on ${dayjs(content.published_at).format(
             'MMMM D, YYYY'
           )}`}</span>
+          <div className='flex flex-row gap-6'>
+            <div className='flex flex-row items-center justify-center gap-2'>
+              <Icon icon='mdi:eye' />
+              <span>{pageViewCount} views</span>
+            </div>
+            <div className='flex flex-row items-center justify-center gap-2'>
+              <Icon icon='ri:time-line' />
+              <span>{content.reading_time_minutes} min read</span>
+            </div>
+          </div>
         </div>
       )}
       icon='tabler:edit-circle'
     >
       <div className='flex flex-col gap-4'>
-        <div className='h-[28rem] w-full overflow-hidden rounded-xl'>
+        <div className='aspect-video w-full overflow-hidden rounded-xl'>
           <NextImageFill
             src={content.social_image}
             alt={content.title}
@@ -73,10 +92,10 @@ const BlogDetailContent: React.FC<IBlogDetailContentProps> = ({ content }) => {
                     {...props}
                   />
                 ),
-                // code: props => <CodeBlock {...props} />,
+                code: (props) => <CodeBlock {...props} />,
                 blockquote: (props) => (
                   <blockquote
-                    className='text-md rounded-lg border-l-[5px] border-neutral-700 border-l-cyan-500 bg-neutral-100 py-3 pl-6 text-cyan-800'
+                    className='text-md rounded-lg border-l-[5px] border-neutral-700 border-l-cyan-500 bg-red-500 py-3 pl-6 text-cyan-800'
                     {...props}
                   />
                 ),

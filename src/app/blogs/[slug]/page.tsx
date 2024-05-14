@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 import { BlogDetailPage } from '@/components/features';
 
-import { getBlogDetail } from '@/service/blog';
+import { getBlogDetail, getBlogViews } from '@/service/blog';
 import { METADATA } from '@/utils/constants/metadata';
 
 type Props = {
@@ -35,6 +35,7 @@ export async function generateMetadata({
 
 export default async function BlogDetail({ params, searchParams }: Props) {
   const blog = await getBlogDetail({ params, searchParams });
+  const pageViewCount = await getBlogViews(params.slug as string);
 
-  return <BlogDetailPage content={blog} />;
+  return <BlogDetailPage content={blog} pageViewCount={pageViewCount} />;
 }

@@ -20,7 +20,7 @@ const BlogList = () => {
       subTitle='Exploring the world of code, creativity, and constant learning.'
       icon='tabler:edit-circle'
     >
-      <div className='mx-auto grid w-[95%] grid-cols-1 gap-6 p-4 md:grid-cols-2'>
+      <div className='mx-auto grid grid-cols-1 gap-6 p-4 md:grid-cols-2'>
         {isLoading
           ? [...Array(4)].map((_, i) => <CardBlogSkeleton key={i} />)
           : data?.map((val, i) => (
@@ -30,7 +30,7 @@ const BlogList = () => {
                 onClick={() => router.push(`/blogs/${val.slug}`)}
               >
                 <div className='relative z-10 w-full overflow-hidden rounded-2xl'>
-                  <div className='h-52 w-full'>
+                  <div className='aspect-video min-h-52 w-full'>
                     <NextImageFill
                       src={val.social_image || ExampleBlog}
                       alt={val.title}
