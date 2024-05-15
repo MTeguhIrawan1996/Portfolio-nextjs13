@@ -9,6 +9,7 @@ interface ISectionWrapperProps {
   children: React.ReactNode;
   title: string;
   subTitle?: string;
+  className?: string;
   icon?: string;
   withDivider?: boolean;
   otherContent?: () => React.ReactNode;
@@ -21,6 +22,7 @@ const SectionWrapper: React.FC<ISectionWrapperProps> = ({
   icon,
   withDivider = false,
   otherContent,
+  className = 'py-6',
 }) => {
   return (
     <section className='flex w-full flex-col'>
@@ -36,7 +38,7 @@ const SectionWrapper: React.FC<ISectionWrapperProps> = ({
         )}
         {otherContent && otherContent()}
       </div>
-      <div className='py-6'>{children}</div>
+      <div className={className}>{children}</div>
       {withDivider && <Divider className='my-1 border-t-2' />}
     </section>
   );

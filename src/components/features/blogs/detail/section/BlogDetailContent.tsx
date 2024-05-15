@@ -50,7 +50,7 @@ const BlogDetailContent: React.FC<IBlogDetailContentProps> = ({
           <NextImageFill
             src={content.social_image}
             alt={content.title}
-            figureClassName='w-full h-full object-cover'
+            figureClassName='w-full h-full'
           />
         </div>
         <div className='flex flex-row gap-2'>

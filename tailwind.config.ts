@@ -9,25 +9,6 @@ const config: Config = {
       fontFamily: {
         primary: ['Sora', ...defaultTheme.fontFamily.sans],
       },
-      // colors: {
-      //   // primary: {
-      //   //   // Customize it on globals.css :root
-      //   //   50: 'rgb(var(--tw-color-primary-50) / <alpha-value>)',
-      //   //   100: 'rgb(var(--tw-color-primary-100) / <alpha-value>)',
-      //   //   200: 'rgb(var(--tw-color-primary-200) / <alpha-value>)',
-      //   //   300: 'rgb(var(--tw-color-primary-300) / <alpha-value>)',
-      //   //   400: 'rgb(var(--tw-color-primary-400) / <alpha-value>)',
-      //   //   500: 'rgb(var(--tw-color-primary-500) / <alpha-value>)',
-      //   //   600: 'rgb(var(--tw-color-primary-600) / <alpha-value>)',
-      //   //   700: 'rgb(var(--tw-color-primary-700) / <alpha-value>)',
-      //   //   800: 'rgb(var(--tw-color-primary-800) / <alpha-value>)',
-      //   //   900: 'rgb(var(--tw-color-primary-900) / <alpha-value>)',
-      //   //   950: 'rgb(var(--tw-color-primary-950) / <alpha-value>)',
-      //   // },
-      //   darkText: '#E4E6EB',
-      //   // dark: '#121212',
-      //   // light: '#fafafa',
-      // },
       keyframes: {
         wave: {
           '0%': { transform: 'rotate(0.0deg)' },
@@ -39,6 +20,17 @@ const config: Config = {
           '60%': { transform: 'rotate(0.0deg)' },
           '100%': { transform: 'rotate(0.0deg)' },
         },
+        slide: {
+          '0%': { transform: 'translateX(0)' },
+          '20%': { transform: 'translateX(-100%)' },
+          '50%': { transform: 'translateX(-100%)' },
+          '90%': { transform: 'translateX(5%)' },
+          '100%': { transform: 'translateX(0)' },
+        },
+        slideInfinite: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-300%)' },
+        },
         rightInfinite: {
           '0%': { transform: 'translateX(-150px)' },
           '100%': { transform: 'translateX(150px)' },
@@ -47,10 +39,20 @@ const config: Config = {
       animation: {
         'waving-hand': 'wave 2s linear infinite',
         'right-infinite': 'rightInfinite 2s linear infinite',
+        'slide-card': 'slide 3s 3s ease-in-out',
+        'accordion-down': 'accordion-down 0.2s ease-out',
+        'accordion-up': 'accordion-up 0.2s ease-out',
+        'slide-infinite': 'slideInfinite 100s linear infinite',
+        'rain-arrow': 'rainArrow 1s ease-out infinite',
+        'enter-left': 'enterLeft 0.5s ease-in-out',
       },
     },
   },
-  plugins: [require('@tailwindcss/typography'), require('daisyui')],
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('daisyui'),
+    require('tailwindcss-animate'),
+  ],
   daisyui: {
     themes: [
       {
