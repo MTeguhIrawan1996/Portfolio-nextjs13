@@ -15,13 +15,14 @@ import { useReadAllBlog } from '@/service/useReadBlogAll';
 import clsxm from '@/utils/lib/clsxm';
 
 const LastArticlesBook = () => {
-  const { data, isLoading = true } = useReadAllBlog();
+  const { data, isLoading } = useReadAllBlog();
 
   return (
     <SectionWrapper
       className='py-2'
       title='Articles'
       subTitle='Last articles'
+      icon='tabler:edit-circle'
       withDivider
     >
       <Swiper
