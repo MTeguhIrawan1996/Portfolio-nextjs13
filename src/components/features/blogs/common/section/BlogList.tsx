@@ -35,6 +35,7 @@ const BlogList = () => {
                       src={val.social_image || ExampleBlog}
                       alt={val.title}
                       figureClassName='h-full w-full'
+                      imageClassName='object-fill'
                     />
                   </div>
                   <div className='card-body items-start justify-start gap-4'>

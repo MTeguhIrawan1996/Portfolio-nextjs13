@@ -51,6 +51,7 @@ const BlogDetailContent: React.FC<IBlogDetailContentProps> = ({
             src={content.social_image}
             alt={content.title}
             figureClassName='w-full h-full'
+            imageClassName='object-fill'
           />
         </div>
         <div className='flex flex-row gap-2'>
