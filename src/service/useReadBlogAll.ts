@@ -14,7 +14,7 @@ export type BlogResponse = {
 export const readAllBlog = async () => {
   try {
     const response = await axios.get(
-      `${process.env.NEXT_PUBLIC_DEVTO_BASE_URL}?username=mteguhirawan1996`
+      `${process.env.NEXT_PUBLIC_DEVTO_BASE_URL}/api/articles?username=mteguhirawan1996`
     );
     return response.data;
   } catch (err: any) {

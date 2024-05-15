@@ -11,7 +11,7 @@ export async function getBlogDetail({
   params,
 }: Props): Promise<BlogDetailProps> {
   const response = await axios.get(
-    `${process.env.NEXT_PUBLIC_DEVTO_BASE_URL}/mteguhirawan1996/${params.slug}`
+    `${process.env.NEXT_PUBLIC_DEVTO_BASE_URL}/api/articles/mteguhirawan1996/${params.slug}`
   );
   if (response.status !== 200) {
     throw new Error('faild to fetch');
@@ -21,7 +21,7 @@ export async function getBlogDetail({
 
 export async function getBlogViews(params: string) {
   const response = await axios.get(
-    `${process.env.NEXT_PUBLIC_DEVTO_BASE_URL}/me/all`,
+    `${process.env.NEXT_PUBLIC_DEVTO_BASE_URL}/api/articles/me/all`,
     {
       headers: {
         'api-key': process.env.NEXT_PUBLIC_DEVTO_KEY,

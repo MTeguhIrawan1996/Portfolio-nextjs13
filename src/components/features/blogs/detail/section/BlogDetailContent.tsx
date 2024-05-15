@@ -7,6 +7,7 @@ import ReactMarkdown from 'react-markdown';
 import remarkGfm from 'remark-gfm';
 
 import {
+  BadgeLink,
   CodeBlock,
   NextImageFill,
   SectionWrapper,
@@ -27,7 +28,7 @@ const BlogDetailContent: React.FC<IBlogDetailContentProps> = ({
     <SectionWrapper
       title={content.title}
       otherContent={() => (
-        <div className='text-response-sm relative flex cursor-pointer flex-row justify-between font-normal text-secondary'>
+        <div className='text-response-sm relative flex flex-row justify-between font-normal text-secondary'>
           <span>{`Published on ${dayjs(content.published_at).format(
             'MMMM D, YYYY'
           )}`}</span>
@@ -43,7 +44,6 @@ const BlogDetailContent: React.FC<IBlogDetailContentProps> = ({
           </div>
         </div>
       )}
-      icon='tabler:edit-circle'
     >
       <div className='flex flex-col gap-4'>
         <div className='aspect-video w-full overflow-hidden rounded-xl'>
@@ -52,6 +52,16 @@ const BlogDetailContent: React.FC<IBlogDetailContentProps> = ({
             alt={content.title}
             figureClassName='w-full h-full object-cover'
           />
+        </div>
+        <div className='flex flex-row gap-2'>
+          {content.tags.map((tag, i) => (
+            <BadgeLink
+              href={`${process.env.NEXT_PUBLIC_DEVTO_BASE_URL}/t/${tag}`}
+              openNewTab
+              label={`#${tag}`}
+              key={i}
+            />
+          ))}
         </div>
         {content.body_markdown && (
           <div className='flex flex-col gap-2'>

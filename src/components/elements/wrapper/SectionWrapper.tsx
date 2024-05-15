@@ -18,7 +18,7 @@ const SectionWrapper: React.FC<ISectionWrapperProps> = ({
   children,
   subTitle,
   title,
-  icon = 'tabler:books',
+  icon,
   withDivider = false,
   otherContent,
 }) => {
@@ -26,7 +26,7 @@ const SectionWrapper: React.FC<ISectionWrapperProps> = ({
     <section className='flex w-full flex-col'>
       <div className='flex flex-col gap-1'>
         <div className='flex flex-row items-center gap-2'>
-          <Icon icon={icon} className='text-2xl text-primary' />
+          {icon && <Icon icon={icon} className='text-2xl text-primary' />}
           <h1 className='h4 text-primary'>{title}</h1>
         </div>
         {subTitle && (
