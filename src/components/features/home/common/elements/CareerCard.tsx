@@ -39,6 +39,7 @@ const Card: React.FC<ICardProps> = ({
         src={logo ?? ''}
         alt={title}
         priority={true}
+        quality={75}
         figureClassName='w-8 aspect-square'
         loading='eager'
       />

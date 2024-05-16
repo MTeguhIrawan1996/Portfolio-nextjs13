@@ -37,14 +37,17 @@ const LastArticlesBook = () => {
         className='mySwiper !py-4'
       >
         {isLoading ? (
-          <div className='flex flex-row gap-4'>
+          <div className='grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3'>
             {[...Array(3)].map((_, i) => (
               <LastArticlesSkeleton key={i} />
             ))}
           </div>
         ) : (
           data?.map((item, i) => (
-            <SwiperSlide className='!relative !h-52 !w-80' key={i}>
+            <SwiperSlide
+              className='!relative !h-52 !w-80'
+              key={`${i}-${item.id}`}
+            >
               <Link href={`/blogs/${item.slug}`}>
                 <div
                   className={clsxm(
@@ -57,6 +60,9 @@ const LastArticlesBook = () => {
                     alt={item.title}
                     figureClassName='h-full w-full relative z-10 overflow-hidden rounded-xl'
                     imageClassName='object-fill'
+                    quality={75}
+                    priority={true}
+                    loading='eager'
                   />
                   <div className='absolute inset-0 z-10 rounded-xl bg-black/50 opacity-70' />
                   <div className='absolute inset-x-0 bottom-0 z-10 p-4'>

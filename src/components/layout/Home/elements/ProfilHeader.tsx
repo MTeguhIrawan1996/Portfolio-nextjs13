@@ -21,6 +21,7 @@ const ProfilHeader = () => {
           src={BackdropImage}
           figureClassName='h-full w-full rounded-lg overflow-hidden brightness-base'
           imageClassName='scale-125'
+          quality={75}
         />
         <NextImageFill
           figureClassName={clsxm(
@@ -30,6 +31,7 @@ const ProfilHeader = () => {
           imageClassName='scale-105 hover:scale-110'
           alt='profil-image'
           src={ProfilImage}
+          quality={20}
         />
         <div className='absolute bottom-1 right-1 overflow-hidden rounded-lg'>
           <ToggleThemeIcon />
