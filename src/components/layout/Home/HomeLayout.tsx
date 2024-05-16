@@ -1,6 +1,9 @@
 'use client';
 
 import * as React from 'react';
+import { ToastContainer } from 'react-toastify';
+
+import 'react-toastify/dist/ReactToastify.css';
 
 import SideBar from '@/components/layout/Home/SideBar';
 
@@ -29,6 +32,7 @@ export default function HomeLayout({ children }: LayoutsProps) {
           </div>
         </main>
         <SideBar />
+        <ToastContainer />
       </div>
     </div>
   );

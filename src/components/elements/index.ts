@@ -4,6 +4,8 @@ import Header from '@/components/elements/global/Header';
 import NextImageFill from '@/components/elements/global/NextImageFill';
 import Status from '@/components/elements/global/Status';
 import ToggleThemeIcon from '@/components/elements/global/ToggleThemeIcon';
+import InputTextAreaRhf from '@/components/elements/input/InputTextAreaRhf';
+import InputTextRhf from '@/components/elements/input/InputTextRhf';
 import BadgeLink from '@/components/elements/links/BadgeLink';
 import PrimaryLink from '@/components/elements/links/PrimaryLink';
 import AnimationDot from '@/components/elements/ui-animation/AnimationDot';
@@ -15,6 +17,8 @@ export {
   CodeBlock,
   Divider,
   Header,
+  InputTextAreaRhf,
+  InputTextRhf,
   NextImageFill,
   PrimaryLink,
   SectionWrapper,
