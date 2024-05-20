@@ -1,6 +1,7 @@
 'use client';
 
 import { Icon } from '@iconify/react';
+import dayjs from 'dayjs';
 import * as React from 'react';
 
 import { NextImageFill } from '@/components/elements';
@@ -10,7 +11,8 @@ import clsxm from '@/utils/lib/clsxm';
 interface ICardProps {
   title: string;
   subTitle: string;
-  date: string;
+  startDate: string;
+  endDate?: string;
   iconCard?: string;
   logo?: string;
 }
@@ -20,7 +22,8 @@ const Card: React.FC<ICardProps> = ({
   subTitle,
   iconCard: IconCard = 'tabler:books',
   logo,
-  date,
+  startDate,
+  endDate,
 }) => {
   return (
     <div
@@ -52,7 +55,8 @@ const Card: React.FC<ICardProps> = ({
         </p>
       </div>
       <h4 className='z-10 text-[12px] font-light text-primary duration-200 group-hover:text-secondary'>
-        {date}
+        {dayjs(startDate).format('MMMM, YYYY')} -{' '}
+        {endDate ? dayjs(endDate).format('MMMM, YYYY') : 'Now'}
       </h4>
     </div>
   );
