@@ -1,3 +1,4 @@
+'use client';
 import { IconAlertCircle } from '@tabler/icons-react';
 import * as React from 'react';
 import { useController } from 'react-hook-form';
