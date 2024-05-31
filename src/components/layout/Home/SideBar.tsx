@@ -23,7 +23,7 @@ const SideBar = () => {
           onClick={() => {
             // eslint-disable-next-line no-console
             console.log('event GA');
-            sendGAEvent({ event: 'click', value: 'xyz' });
+            sendGAEvent({ event: 'testing', value: 'same' });
           }}
         >
           Send Event GA
