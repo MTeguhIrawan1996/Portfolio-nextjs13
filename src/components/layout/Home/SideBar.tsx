@@ -1,3 +1,4 @@
+import { sendGAEvent } from '@next/third-parties/google';
 import * as React from 'react';
 
 import { Divider } from '@/components/elements';
@@ -17,6 +18,16 @@ const SideBar = () => {
     >
       <div className='flex flex-col items-center justify-start gap-4'>
         <ProfilHeader />
+        <button
+          className='btn btn-primary'
+          onClick={() => {
+            // eslint-disable-next-line no-console
+            console.log('event GA');
+            sendGAEvent({ event: 'buttonClicked', value: 'xyz' });
+          }}
+        >
+          Send Event GA
+        </button>
         <nav className='w-full'>
           <Divider className='border-t-2' />
           <div className='flex flex-col items-start justify-start gap-2'>
