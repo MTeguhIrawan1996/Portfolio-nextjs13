@@ -52,7 +52,7 @@ export default function LastArticlesCard({ data }: Props) {
     ],
   };
   return (
-    <div className='py-4'>
+    <div>
       <Slider {...settings}>
         {data?.map((item, i) => (
           <div className='h-52 px-2 py-2' key={`${i}-${item.id}`}>
