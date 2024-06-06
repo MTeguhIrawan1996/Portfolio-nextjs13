@@ -1,7 +1,7 @@
 export const METADATA = {
   creator: 'Teguh Irawan',
   description: 'Personal website, portfolio, blog, programming tips of onedev',
-  keyword: 'teguh irawan, onedev',
+  keyword: ['Teguh Irawan', 'OneDev', 'Portfolio'],
   authors: {
     name: 'Teguh Irawan',
     url: process.env.NEXT_PUBLIC_URL,
@@ -11,6 +11,6 @@ export const METADATA = {
     siteName: 'OneDev',
     locale: 'id-ID',
   },
-  exTitle: 'OneDev |',
+  exTitle: 'Teguh Irawan |',
   profile: '/img/card-name.png',
 };

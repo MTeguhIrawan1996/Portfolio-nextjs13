@@ -18,7 +18,7 @@ export const metadata: Metadata = {
   // title: `${METADATA.creator} ${METADATA.exTitle}`,
   title: {
     absolute: '',
-    default: `${METADATA.exTitle} ${METADATA.creator}`,
+    default: `${METADATA.exTitle} OneDev`,
     template: `${METADATA.exTitle} %s`,
   },
   description: METADATA.description,
