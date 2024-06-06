@@ -33,6 +33,8 @@ export async function generateMetadata({
   };
 }
 
+export const revalidate = 600;
+
 export default async function BlogDetail({ params, searchParams }: Props) {
   const blog = await getBlogDetail({ params, searchParams });
   const pageViewCount = await getBlogViews(params.slug as string);

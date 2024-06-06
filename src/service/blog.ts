@@ -1,4 +1,5 @@
-import axios from 'axios';
+import axios, { AxiosResponse } from 'axios';
+import { cache } from 'react';
 
 import { BlogDetailProps, BlogItem } from '@/types/global';
 
@@ -7,17 +8,16 @@ type Props = {
   searchParams: { [key: string]: string | string[] | undefined };
 };
 
-export async function getBlogDetail({
-  params,
-}: Props): Promise<BlogDetailProps> {
-  const response = await axios.get(
-    `${process.env.NEXT_PUBLIC_DEVTO_BASE_URL}/api/articles/mteguhirawan1996/${params.slug}`
-  );
-  if (response.status !== 200) {
-    throw new Error('faild to fetch');
+export const getBlogDetail = cache(async ({ params }: Props) => {
+  try {
+    const response: AxiosResponse<BlogDetailProps, any> = await axios.get(
+      `${process.env.NEXT_PUBLIC_DEVTO_BASE_URL}/api/articles/mteguhirawan1996/${params.slug}`
+    );
+    return response.data;
+  } catch (err) {
+    return Promise.reject(err);
   }
-  return response.data;
-}
+});
 
 export async function getBlogViews(params: string) {
   const response = await axios.get(

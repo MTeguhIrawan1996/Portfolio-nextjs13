@@ -43,7 +43,7 @@ const SectionWrapper: React.FC<ISectionWrapperProps> = ({
           )}
         </div>
         {isLoading ? (
-          <div className='skeleton h-4 w-20' />
+          <div className='skeleton h-4 w-80' />
         ) : (
           subTitle && (
             <span className='text-response-sm font-normal text-secondary'>
