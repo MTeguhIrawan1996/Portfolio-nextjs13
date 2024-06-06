@@ -5,8 +5,6 @@ import LastArticlesCard from '@/components/features/home/common/elements/LastArt
 
 import { readAllBlogServer } from '@/service/useReadBlogAll';
 
-export const revalidate = 3600;
-
 export default async function LastArticlesBook() {
   const data = await readAllBlogServer();
 

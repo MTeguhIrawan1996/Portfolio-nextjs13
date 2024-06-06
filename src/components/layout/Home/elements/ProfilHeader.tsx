@@ -22,6 +22,8 @@ const ProfilHeader = () => {
           figureClassName='h-full w-full rounded-lg overflow-hidden brightness-base'
           imageClassName='scale-125'
           quality={75}
+          priority
+          loading='eager'
         />
         <NextImageFill
           figureClassName={clsxm(

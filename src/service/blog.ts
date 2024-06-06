@@ -1,5 +1,6 @@
 import axios, { AxiosResponse } from 'axios';
 import { cache } from 'react';
+import 'server-only';
 
 import { BlogDetailProps, BlogItem } from '@/types/global';
 
