@@ -13,6 +13,7 @@ interface ISectionWrapperProps {
   icon?: string;
   withDivider?: boolean;
   otherContent?: () => React.ReactNode;
+  isLoading?: boolean;
 }
 
 const SectionWrapper: React.FC<ISectionWrapperProps> = ({
@@ -23,18 +24,32 @@ const SectionWrapper: React.FC<ISectionWrapperProps> = ({
   withDivider = false,
   otherContent,
   className = 'py-6',
+  isLoading,
 }) => {
   return (
     <section className='flex w-full flex-col'>
       <div className='flex flex-col gap-1'>
         <div className='flex flex-row items-center gap-2'>
-          {icon && <Icon icon={icon} className='text-2xl text-primary' />}
-          <h1 className='h4 text-primary'>{title}</h1>
+          {isLoading ? (
+            <>
+              <div className='skeleton aspect-square h-8' />
+              <div className='skeleton h-8 w-40' />
+            </>
+          ) : (
+            <>
+              {icon && <Icon icon={icon} className='text-2xl text-primary' />}
+              <h1 className='h4 text-primary'>{title}</h1>
+            </>
+          )}
         </div>
-        {subTitle && (
-          <span className='text-response-sm font-normal text-secondary'>
-            {subTitle}
-          </span>
+        {isLoading ? (
+          <div className='skeleton h-4 w-20' />
+        ) : (
+          subTitle && (
+            <span className='text-response-sm font-normal text-secondary'>
+              {subTitle}
+            </span>
+          )
         )}
         {otherContent && otherContent()}
       </div>

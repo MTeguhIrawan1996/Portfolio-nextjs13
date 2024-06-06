@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
-import axios from 'axios';
+import axios, { AxiosResponse } from 'axios';
+import { cache } from 'react';
 
 export type BlogResponse = {
   id: number;
@@ -14,13 +15,25 @@ export type BlogResponse = {
 export const readAllBlog = async () => {
   try {
     const response = await axios.get(
-      `${process.env.NEXT_PUBLIC_DEVTO_BASE_URL}/api/articles?username=mteguhirawan1996`
+      `${process.env.NEXT_PUBLIC_DEVTO_BASE_URL}/api/articles?username=mteguhirawan1996`,
+      {}
     );
     return response.data;
   } catch (err: any) {
     return Promise.reject(err);
   }
 };
+
+export const readAllBlogServer = cache(async () => {
+  try {
+    const response: AxiosResponse<BlogResponse[], any> = await axios.get(
+      `${process.env.NEXT_PUBLIC_DEVTO_BASE_URL}/api/articles?username=mteguhirawan1996`
+    );
+    return response.data;
+  } catch (err: any) {
+    return Promise.reject(err);
+  }
+});
 
 export const useReadAllBlog = () => {
   return useQuery<BlogResponse[]>({
