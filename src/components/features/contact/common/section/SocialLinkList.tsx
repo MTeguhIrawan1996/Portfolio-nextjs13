@@ -17,28 +17,37 @@ const ClipPathLinks = () => {
   return (
     <div className='divide-y divide-secondary/50 border border-secondary/50'>
       <div className='grid grid-cols-2 divide-x divide-secondary/50'>
-        <LinkBox icon='mdi:github' href='https://github.com/MTeguhIrawan1996' />
+        <LinkBox
+          icon='mdi:github'
+          href='https://github.com/MTeguhIrawan1996'
+          label='github'
+        />
         <LinkBox
           icon='mdi:linkedin'
           href='https://www.linkedin.com/in/irawan-m-774762229/'
+          label='linkedin'
         />
       </div>
       <div className='grid grid-cols-4 divide-x divide-secondary/50'>
         <LinkBox
           icon='ic:baseline-tiktok'
           href='https://www.tiktok.com/@onedev0?_t=8m2FF4Eo9Nx&_r=1'
+          label='tiktok'
         />
         <LinkBox
           icon='mdi:instagram'
           href='https://www.instagram.com/whaann__?igsh=aTJ1NG9zZmRqOXVr&utm_source=qr'
+          label='instagram'
         />
         <LinkBox
           icon='ic:baseline-facebook'
           href='https://www.facebook.com/teguh.coollpartii?mibextid=kFxxJD'
+          label='facbook'
         />
         <LinkBox
           icon='simple-icons:showwcase'
           href='https://www.showwcase.com/teguhirawan1996'
+          label='showwcase'
         />
       </div>
     </div>
@@ -65,7 +74,7 @@ const EXIT_KEYFRAMES = {
   right: [NO_CLIP, BOTTOM_LEFT_CLIP],
 };
 
-const LinkBox = ({ icon, href }) => {
+const LinkBox = ({ icon, href, label }) => {
   const [scope, animate] = useAnimate();
 
   const getNearestSide = (
@@ -122,6 +131,7 @@ const LinkBox = ({ icon, href }) => {
 
   return (
     <a
+      aria-label={label}
       href={href}
       target='_blank'
       rel='noopener noreferrer'

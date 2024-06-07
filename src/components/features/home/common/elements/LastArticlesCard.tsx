@@ -55,7 +55,11 @@ export default function LastArticlesCard({ data }: Props) {
     <div>
       <Slider {...settings}>
         {data?.map((item, i) => (
-          <div className='h-52 px-2 py-2' key={`${i}-${item.id}`}>
+          <div
+            className='h-52 px-2 py-2'
+            key={`${i}-${item.id}`}
+            aria-hidden='true'
+          >
             <Link href={`/blogs/${item.slug}`}>
               <div
                 className={clsxm(
@@ -71,6 +75,7 @@ export default function LastArticlesCard({ data }: Props) {
                   quality={50}
                   priority={true}
                   loading='eager'
+                  loadingState={false}
                 />
                 <div className='absolute inset-0 z-10 overflow-hidden rounded-xl bg-black/50 opacity-70' />
                 <div className='absolute inset-x-0 bottom-0 z-10 p-4'>

@@ -53,6 +53,9 @@ const BlogDetailContent: React.FC<IBlogDetailContentProps> = ({
             alt={content.title}
             figureClassName='w-full h-full'
             imageClassName='object-fill'
+            priority
+            quality={75}
+            loading='eager'
           />
         </div>
         <div className='flex flex-row gap-2'>

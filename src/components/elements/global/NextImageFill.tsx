@@ -8,6 +8,7 @@ import clsxm from '@/utils/lib/clsxm';
 interface INextImageFillProps extends ImageProps {
   figureClassName: string;
   imageClassName?: string;
+  loadingState?: boolean;
 }
 
 export default function NextImageFill({
@@ -18,6 +19,7 @@ export default function NextImageFill({
   quality = 100,
   placeholder = 'empty',
   loading = 'lazy',
+  loadingState = false,
   ...rest
 }: INextImageFillProps) {
   const [isLoading, setLoading] = React.useState(true);
@@ -26,7 +28,7 @@ export default function NextImageFill({
     <figure
       className={clsxm(
         'relative',
-        isLoading && 'animate-pulse bg-gray-200',
+        loadingState && isLoading && 'animate-pulse bg-gray-200',
         figureClassName
       )}
     >
@@ -38,7 +40,7 @@ export default function NextImageFill({
         className={clsxm(
           'bg-center object-cover',
           'duration-700 ease-in-out',
-          isLoading
+          loadingState && isLoading
             ? 'scale-105 blur-xl grayscale'
             : 'scale-100 blur-0 grayscale-0',
           imageClassName

@@ -28,7 +28,7 @@ const MenuItem: React.FC<IMenuItemProps> = ({ label, icon: Icon, href }) => {
       )}
     >
       {Icon}
-      <span className='text-secondary'>{label}</span>
+      <span className='font-medium text-primary'>{label}</span>
     </PrimaryLink>
   );
 };

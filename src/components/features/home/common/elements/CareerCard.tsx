@@ -44,20 +44,21 @@ const Card: React.FC<ICardProps> = ({
         priority={false}
         quality={50}
         figureClassName='w-8 aspect-square'
+        loadingState={false}
         // loading='eager'
       />
       <div className='z-10 pt-6'>
-        <h3 className='text-response-base text-primary duration-200 group-hover:text-secondary'>
+        <h1 className='text-response-base text-primary duration-200 group-hover:text-secondary'>
           {title}
-        </h3>
+        </h1>
         <p className='text-response-sm font-normal text-primary duration-200 group-hover:text-secondary'>
           {subTitle}
         </p>
       </div>
-      <h4 className='z-10 text-[12px] font-light text-primary duration-200 group-hover:text-secondary'>
+      <h2 className='z-10 text-[12px] font-light text-primary duration-200 group-hover:text-secondary'>
         {dayjs(startDate).format('MMMM, YYYY')} -{' '}
         {endDate ? dayjs(endDate).format('MMMM, YYYY') : 'Now'}
-      </h4>
+      </h2>
     </div>
   );
 };
