@@ -13,7 +13,7 @@ export const STACKS: stacksProps[] = [
   {
     name: 'NextJs',
     icon: 'akar-icons:nextjs-fill',
-    className: 'text-2xl text-dark',
+    className: 'text-2xl text-neutral-900',
   },
   {
     name: 'Graphql',

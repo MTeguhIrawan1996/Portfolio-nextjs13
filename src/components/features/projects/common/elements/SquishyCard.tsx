@@ -38,10 +38,10 @@ const Card = ({ title, imgUrl, tags, stacks }: IProps) => {
           scale: 1.05,
         },
       }}
-      className='glass relative h-96 w-full overflow-hidden rounded-xl bg-gray-600 p-8 shadow-lg'
+      className='glass-bg glass relative h-96 w-full overflow-hidden rounded-xl p-8 shadow-lg'
     >
       <div className='relative z-10 flex h-full flex-col items-start justify-end gap-1'>
-        <span className='mb-1 block w-fit rounded-full bg-primary/50 px-3 py-0.5 text-xs font-light text-accent'>
+        <span className='mb-1 block w-fit rounded-full bg-gradient-to-l from-blue-500 to-green-500 px-3 py-0.5 text-xs font-light text-white'>
           {tags?.[0]}
         </span>
         <motion.span
@@ -55,7 +55,7 @@ const Card = ({ title, imgUrl, tags, stacks }: IProps) => {
             duration: 1,
             ease: 'backInOut',
           }}
-          className='block origin-top-left text-lg font-black leading-[1.1] text-gray-300 md:text-xl'
+          className='block origin-top-left text-lg font-black leading-[1.1] text-primary md:text-xl'
         >
           {title}
         </motion.span>

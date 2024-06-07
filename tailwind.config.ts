@@ -59,6 +59,9 @@ const config: Config = {
           secondary: '#6b7280', // Cool Gray 500
           accent: '#f3f4f6', // Cool Gray 100
           'base-100': '#FFFFFF', // White
+          '.glass-bg': {
+            'background-color': '#e5e7eb',
+          },
           '.sidebar': {
             'background-color': '#f3f4f6', // Cool Gray 100
             color: '#111827', // Cool Gray 900
@@ -76,6 +79,9 @@ const config: Config = {
           secondary: '#d1d5db' /* gray-300 */,
           accent: '#1f2937' /* gray-800 */,
           'base-100': '#1d232a',
+          '.glass-bg': {
+            'background-color': '#171717',
+          },
           '.sidebar': {
             'background-color': '#1f2937' /* gray-800 */,
             color: '#d1d5db' /* gray-300 */,

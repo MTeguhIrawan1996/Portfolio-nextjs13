@@ -20,7 +20,7 @@ export default function BlogsCard({ data }: Props) {
     <div className='mx-auto grid grid-cols-1 gap-6 p-4 md:grid-cols-2'>
       {data?.map((val, i) => (
         <button
-          className='card glass w-full bg-gray-600 shadow-md md:transition-transform md:duration-200 md:hover:scale-105'
+          className='glass-bg card glass w-full shadow-lg md:transition-transform md:duration-200 md:hover:scale-105'
           key={`${val.id}`}
           onClick={() => router.push(`/blogs/${val.slug}`)}
         >
@@ -33,16 +33,16 @@ export default function BlogsCard({ data }: Props) {
                 imageClassName='object-fill'
               />
             </div>
-            <div className='card-body items-start justify-start gap-4'>
+            <div className='card-body items-start justify-start gap-4 px-4 py-4'>
               <div className='flex flex-col gap-1'>
-                <h2 className='card-title !mb-0 text-left text-gray-300'>
+                <h2 className='text-response-base text-left leading-tight text-primary'>
                   {val.title}
                 </h2>
-                <span className='text-left text-xs text-gray-300'>
+                <span className='text-left text-xs font-normal text-secondary'>
                   {dayjs(val.published_at).format('MMM D, YYYY')}
                 </span>
               </div>
-              <p className='text-response-sm text-left font-normal text-gray-300'>
+              <p className='text-response-sm text-left font-normal text-secondary'>
                 {val.description}
               </p>
             </div>
