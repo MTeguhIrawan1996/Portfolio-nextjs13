@@ -1,9 +1,12 @@
 'use client';
 
 import { Icon } from '@iconify/react';
+import { useRouter } from 'next/navigation';
 import * as React from 'react';
 
 import { Divider } from '@/components/elements';
+
+import clsxm from '@/utils/lib/clsxm';
 
 interface ISectionWrapperProps {
   children: React.ReactNode;
@@ -14,6 +17,7 @@ interface ISectionWrapperProps {
   withDivider?: boolean;
   otherContent?: () => React.ReactNode;
   isLoading?: boolean;
+  enableBack?: boolean;
 }
 
 const SectionWrapper: React.FC<ISectionWrapperProps> = ({
@@ -25,10 +29,24 @@ const SectionWrapper: React.FC<ISectionWrapperProps> = ({
   otherContent,
   className = 'py-6',
   isLoading,
+  enableBack,
 }) => {
+  const router = useRouter();
   return (
-    <section className='flex w-full flex-col'>
-      <div className='flex flex-col gap-1'>
+    <section className='flex w-full flex-col items-start'>
+      {enableBack && (
+        <button
+          className='btn btn-xs mb-3 text-xs text-primary'
+          onClick={() => router.back()}
+        >
+          <Icon
+            icon='tabler:arrow-back-up'
+            className='text-base text-primary'
+          />
+          Back
+        </button>
+      )}
+      <div className='flex w-full flex-col gap-1'>
         <div className='flex flex-row items-center gap-2'>
           {isLoading ? (
             <>
@@ -53,8 +71,8 @@ const SectionWrapper: React.FC<ISectionWrapperProps> = ({
         )}
         {otherContent && otherContent()}
       </div>
-      <div className={className}>{children}</div>
-      {withDivider && <Divider className='my-1 border-t-2' />}
+      <div className={clsxm('w-full', className)}>{children}</div>
+      {withDivider && <Divider className='my-1 w-full border-t-2' />}
     </section>
   );
 };

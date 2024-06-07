@@ -27,6 +27,7 @@ const BlogDetailContent: React.FC<IBlogDetailContentProps> = ({
   return (
     <SectionWrapper
       title={content.title}
+      enableBack
       otherContent={() => (
         <div className='text-response-sm relative flex flex-row justify-between font-normal text-secondary'>
           <span>{`Published on ${dayjs(content.published_at).format(
