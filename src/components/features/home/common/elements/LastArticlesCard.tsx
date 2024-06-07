@@ -68,7 +68,7 @@ export default function LastArticlesCard({ data }: Props) {
                   alt={item.title}
                   figureClassName='h-full w-full relative z-10 overflow-hidden rounded-xl'
                   imageClassName='object-fill'
-                  quality={75}
+                  quality={50}
                   priority={true}
                   loading='eager'
                 />

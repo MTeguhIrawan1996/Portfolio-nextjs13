@@ -46,11 +46,9 @@ export default function RootLayout({
     <html lang='id'>
       <body>
         <TanStackQueryProvider>
-          {/* <ThemeProviderContext> */}
           <ThemeProvider>
             <HomeLayout>{children}</HomeLayout>
           </ThemeProvider>
-          {/* </ThemeProviderContext> */}
         </TanStackQueryProvider>
       </body>
       <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_ID || ''} />
